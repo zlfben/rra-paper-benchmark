@@ -10,6 +10,7 @@ AWS_C_COMMON_PATH="./aws-c-common"
 MAKE="make"
 GOTO_INSTRUMENT="./cbmc/build/bin/goto-instrument"
 CBMC="./cbmc/build/bin/cbmc"
+KISSAT="./kissat/build/kissat"
 CBMC_FLAGS="--trace
             --bounds-check
             --conversion-check
@@ -22,7 +23,8 @@ CBMC_FLAGS="--trace
             --pointer-primitive-check
             --signed-overflow-check
             --undefined-shift-check
-            --unsigned-overflow-check"
+            --unsigned-overflow-check
+            --external-sat-solver $KISSAT"
 
 # benchmark name + number of concrete indices
 AWS_C_COMMON_TESTS=(

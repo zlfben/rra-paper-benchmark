@@ -1,10 +1,13 @@
 #!/bin/bash
 
+# build kissat sat solver
+cd kissat
+./configure && make
+cd ..
+
+# build CBMC with Ninja
 cd cbmc
-
-# make Ninja makefiles
 cmake -Bbuild -GNinja -DWITH_JBMC=OFF -S.
-
-# build cbmc
 cd build
 ninja
+cd ../..
