@@ -1,3 +1,6 @@
 [submodule "cbmc"]
 	path = cbmc
 	url = git@github.com:zlfben/cbmc.git
+[submodule "aws-c-common"]
+	path = aws-c-common
+	url = git@github.com:zlfben/aws-c-common.git
