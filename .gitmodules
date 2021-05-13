@@ -4,3 +4,6 @@
 [submodule "aws-c-common"]
 	path = aws-c-common
 	url = git@github.com:zlfben/aws-c-common.git
+[submodule "kissat"]
+	path = kissat
+	url = git@github.com:arminbiere/kissat.git
