@@ -1,0 +1,59 @@
+{
+    "entries": [
+        {
+            "entity": "array",
+            "function": "aws_byte_cursor_eq_byte_buf_harness",
+            "name": "aws_byte_cursor_eq_byte_buf_harness::1::cur.ptr",
+            "shape": {
+                "indices": ["cncrt0", "cncrt1", "cncrt2", "cncrt3", "length"],
+                "assumptions": [
+                    "cncrt0==0",
+                    "cncrt0<cncrt1",
+                    "cncrt1<cncrt2",
+                    "cncrt2<cncrt3",
+                    "cncrt3<length"
+                ],
+                "shape-type": "c*c*c*c*l"
+            },
+            "abst-function-file": "specifications/abst-funcs.c",
+            "abst-functions":{
+                "add-abs-conc": "add_abs_to_conc_5",
+                "sub-abs-conc": "sub_conc_from_abs_5",
+                "multiply-abs-conc": "multiply_abs_with_conc_5",
+                "precise-check": "is_precise_5",
+                "abstract-index": "five_abs",
+                "concretize-index": "concretize_5",
+                "multiply-indices": null,
+                "mod-indices": null
+            },
+            "related-entities": [
+                {
+                    "entity": "array",
+                    "function": "aws_byte_cursor_eq_byte_buf_harness",
+                    "name": "aws_byte_cursor_eq_byte_buf_harness::1::buf.ptr"
+                },
+                {
+                    "entity": "length",
+                    "function": "aws_byte_cursor_eq_byte_buf_harness",
+                    "name": "aws_byte_cursor_eq_byte_buf_harness::1::cur.len"
+                },
+                {
+                    "entity": "array",
+                    "function": "aws_byte_cursor_eq_byte_buf_harness",
+                    "name": "aws_byte_cursor_eq_byte_buf_harness::1::buf.buffer"
+                },
+                {
+                    "entity": "length",
+                    "function": "aws_byte_cursor_eq_byte_buf_harness",
+                    "name": "aws_byte_cursor_eq_byte_buf_harness::1::buf.capacity"
+                },
+                {
+                    "entity": "length",
+                    "function": "aws_byte_cursor_eq_byte_buf_harness",
+                    "name": "aws_byte_cursor_eq_byte_buf_harness::1::buf.len"
+                }
+            ]
+
+        }
+    ]
+}
