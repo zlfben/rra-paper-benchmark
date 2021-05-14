@@ -42,7 +42,6 @@ AWS_C_COMMON_TESTS=(
     "aws_byte_cursor_eq_byte_buf 5"
     "aws_byte_cursor_eq_byte_buf_ignore_case 5"
     "aws_byte_cursor_left_trim_pred 3"
-    "aws_array_list_comparator_string 4"
 )
 
 cwd=$(realpath $(pwd))
