@@ -41,7 +41,7 @@ size_t nndt_above(size_t bound){
 
 //For one index: *c*
 // covers c*, +c*
-size_t one_abs(size_t index, size_t a1){
+size_t abstract_1(size_t index, size_t a1){
     if(index < a1) return(0);
     else if(index == a1) return(1);
     else return(2);
@@ -118,7 +118,7 @@ size_t sub_conc_from_abs_1(size_t abs_ind, size_t num, size_t a1){
 //Cases +c+c*, c+c*, +cc*, c+c*, cc+ can all be 
 //handled by the same function as long as we are careful with concretization, increment and other funcs.
 //If model checking time is affected then we can split into finer cases.
-size_t two_abs(size_t index, size_t a1, size_t a2) {
+size_t abstract_2(size_t index, size_t a1, size_t a2) {
     if (a1==0 && a1+1==a2) {  // cc*
         if (index == a1) return 0;
         else if (index == a2) return 1;
@@ -298,7 +298,7 @@ size_t real_to_raw_3(size_t real_index, size_t a1, size_t a2, size_t a3)
 // *1: exist if a1>0
 // *2: exist if a1+1!=a2
 // *3: exist if a2+1!=a3
-size_t three_abs(size_t index, size_t a1, size_t a2, size_t a3) {
+size_t abstract_3(size_t index, size_t a1, size_t a2, size_t a3) {
     size_t raw_index = 0;
     if (index < a1) raw_index = 0;
     else if (index == a1) raw_index = 1;
@@ -423,7 +423,7 @@ size_t real_to_raw_4(size_t real_index, size_t a1, size_t a2, size_t a3, size_t 
 
 //Get the abstraction of an index for shape *c*c*c*c*.
 //If model checking time is affected then we can split into finer cases.
-size_t four_abs(size_t index, size_t a1, size_t a2, size_t a3, size_t a4) {
+size_t abstract_4(size_t index, size_t a1, size_t a2, size_t a3, size_t a4) {
     size_t raw_index = 0;
     if (index < a1) raw_index = 0;
     else if (index == a1) raw_index = 1;
@@ -566,7 +566,7 @@ size_t real_to_raw_5(size_t real_index, size_t a1, size_t a2, size_t a3, size_t 
 
 //Get the abstraction of an index for shape *c*c*c*c*.
 //If model checking time is affected then we can split into finer cases.
-size_t five_abs(size_t index, size_t a1, size_t a2, size_t a3, size_t a4, size_t a5) {
+size_t abstract_5(size_t index, size_t a1, size_t a2, size_t a3, size_t a4, size_t a5) {
     size_t raw_index = 0;
     if (index < a1) raw_index = 0;
     else if (index == a1) raw_index = 1;
@@ -722,7 +722,7 @@ size_t real_to_raw_6(size_t real_index, size_t a1, size_t a2, size_t a3, size_t 
 
 //Get the abstraction of an index for shape *c*c*c*c*c*.
 //If model checking time is affected then we can split into finer cases.
-size_t six_abs(size_t index, size_t a1, size_t a2, size_t a3, size_t a4, size_t a5, size_t a6) {
+size_t abstract_6(size_t index, size_t a1, size_t a2, size_t a3, size_t a4, size_t a5, size_t a6) {
     size_t raw_index = 0;
     if (index < a1) raw_index = 0;
     else if (index == a1) raw_index = 1;

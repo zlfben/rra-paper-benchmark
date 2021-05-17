@@ -4,24 +4,8 @@
             "entity": "array",
             "function": "aws_array_list_front_harness",
             "name": "aws_array_list_front_harness::1::list->data",
-            "shape": {
-                "indices": ["front", "cncrt"],
-                "assumptions": [
-                    "front < cncrt",
-                    "front = 0"
-                ],
-                "shape-type": "c*c*"
-            },
+            "shape-type": "c*c*",
             "abst-function-file": "specifications/abst-funcs.c",
-            "abst-functions":{
-                "add-abs-conc": "add_abs_to_conc",
-                "sub-abs-conc": "sub_conc_from_abs",
-                "precise-check": "is_precise",
-                "abstract-index": "two_abs",
-                "concretize-index": "concretize",
-                "multiply-indices": null,
-                "mod-indices": null
-            },
             "related-entities": [
                 {
                     "entity": "scalar",
