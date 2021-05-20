@@ -13,35 +13,24 @@ CBMC="./cbmc/build/bin/cbmc"
 KISSAT="./kissat/build/kissat"
 CBMC_FLAGS="--trace
             --bounds-check
-            --conversion-check
-            --div-by-zero-check
-            --enum-range-check
-            --float-overflow-check
-            --nan-check
-            --pointer-check
-            --pointer-overflow-check
-            --pointer-primitive-check
-            --signed-overflow-check
-            --undefined-shift-check
-            --unsigned-overflow-check
             --external-sat-solver $KISSAT"
 
 # benchmark name + number of concrete indices
 AWS_C_COMMON_TESTS=(
-    "aws_array_eq 4"
+    # "aws_array_eq 4"
     "aws_array_eq_c_str 5"
-    "aws_array_eq_c_str_ignore_case 5"
-    "aws_array_eq_ignore_case 4"
-    "aws_byte_buf_eq 6"
-    "aws_byte_buf_eq_ignore_case 6"
-    "aws_byte_buf_eq_c_str 6"
-    "aws_byte_buf_eq_c_str_ignore_case 6"
-    "aws_byte_cursor_eq 4"
-    "aws_byte_cursor_eq_c_str 5"
-    "aws_byte_cursor_eq_c_str_ignore_case 5"
-    "aws_byte_cursor_eq_byte_buf 5"
-    "aws_byte_cursor_eq_byte_buf_ignore_case 5"
-    "aws_byte_cursor_left_trim_pred 3"
+    # "aws_array_eq_c_str_ignore_case 5"
+    # "aws_array_eq_ignore_case 4"
+    # "aws_byte_buf_eq 6"
+    # "aws_byte_buf_eq_ignore_case 6"
+    # "aws_byte_buf_eq_c_str 6"
+    # "aws_byte_buf_eq_c_str_ignore_case 6"
+    # "aws_byte_cursor_eq 4"
+    # "aws_byte_cursor_eq_c_str 5"
+    # "aws_byte_cursor_eq_c_str_ignore_case 5"
+    # "aws_byte_cursor_eq_byte_buf 5"
+    # "aws_byte_cursor_eq_byte_buf_ignore_case 5"
+    # "aws_byte_cursor_left_trim_pred 3"
 )
 
 cwd=$(realpath $(pwd))

@@ -18,7 +18,7 @@
                     "name": "aws_array_eq_c_str_harness::1::array_len"
                 },
                 {
-                    "entity": "length",
+                    "entity": "scalar",
                     "function": "",
                     "name": "str_len"
                 },
