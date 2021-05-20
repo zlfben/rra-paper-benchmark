@@ -26,3 +26,11 @@ We provide a script running benchmarks mentioned in the paper.
 ```console
 ./run.sh
 ```
+
+# Run the proof for aws-array-eq-c-str with refinement
+```console
+git checkout refinement
+git submodule update
+./build.sh
+./run.sh
+```
