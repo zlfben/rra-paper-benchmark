@@ -86,7 +86,7 @@ size_t add_abs_to_conc_1(size_t abs_ind, size_t num, size_t a1){
         //This might be inefficient model checking wise.
         //We can always write an explicit abstraction like we did for num = 1.
         size_t conc = concretize_1(abs_ind, a1);
-        return(one_abs(conc+num, a1));
+        return(abstract_1(conc+num, a1));
     }
 
 }
@@ -232,7 +232,7 @@ size_t add_abs_to_conc_2(size_t abs_ind, size_t num, size_t a1, size_t a2){
     //     return(two_abs(conc+num, a1, a2));
     // }
     size_t conc = concretize_2(abs_ind, a1, a2);
-    return two_abs(conc+num, a1, a2);
+    return abstract_2(conc+num, a1, a2);
 
 }
 
@@ -348,7 +348,7 @@ size_t add_abs_to_conc_3(size_t abs_ind, size_t num, size_t a1, size_t a2, size_
         }
     } else {
         size_t conc = concretize_3(abs_ind, a1, a2, a3);
-        return three_abs(conc+num, a1, a2, a3);
+        return abstract_3(conc+num, a1, a2, a3);
     }
 }
 
@@ -485,7 +485,7 @@ size_t add_abs_to_conc_4(size_t abs_ind, size_t num, size_t a1, size_t a2, size_
         }
     } else {
         size_t conc = concretize_4(abs_ind, a1, a2, a3, a4);
-        return four_abs(conc+num, a1, a2, a3, a4);
+        return abstract_4(conc+num, a1, a2, a3, a4);
     }
 
 }
@@ -635,7 +635,7 @@ size_t add_abs_to_conc_5(size_t abs_ind, size_t num, size_t a1, size_t a2, size_
         }
     } else {
         size_t conc = concretize_5(abs_ind, a1, a2, a3, a4, a5);
-        return five_abs(conc+num, a1, a2, a3, a4, a5);
+        return abstract_5(conc+num, a1, a2, a3, a4, a5);
     }
 
 }
@@ -798,7 +798,7 @@ size_t add_abs_to_conc_6(size_t abs_ind, size_t num, size_t a1, size_t a2, size_
         }
     } else {
         size_t conc = concretize_6(abs_ind, a1, a2, a3, a4, a5, a6);
-        return six_abs(conc+num, a1, a2, a3, a4, a5, a6);
+        return abstract_6(conc+num, a1, a2, a3, a4, a5, a6);
     }
 
 }
